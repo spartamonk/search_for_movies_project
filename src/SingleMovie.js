@@ -8,7 +8,7 @@ const url =
 
 const SingleMovie = () => {
   const {id}= useParams();
-  const {isLoading, isError, errorMsg, movieInfo} = useFetch(`&i=${id}`);
+  const {isLoading, isError, errorMsg, data: movieInfo} = useFetch(`&i=${id}`);
  
   if(isLoading) {
     return (
